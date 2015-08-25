@@ -14,10 +14,26 @@
     }
 }
 
-.tags {
-    @include border-radius(0);
-    box-shadow: none;
-    width: flex;
+tags-input {
+    .tags {
+        @include border-radius(0);
+        box-shadow: none;
+        width: flex;
+
+        .tag-item {
+            background: #0097cf;
+            border: none;
+            color: white;
+            
+            .remove-button {
+                color: white;
+            }
+
+            &.selected {
+                background: #FF2F3C;
+            }
+        }
+    }
 }
 
 .tagField {

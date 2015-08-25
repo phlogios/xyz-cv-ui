@@ -136,25 +136,41 @@
                 </div>
 
                 <div class="list-group advanced-search-table" ng-if="vm.displayMode == 'table'">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <strong>Name</strong>
+                            </div>
+                            <div class="col-md-2">
+                                <strong>Office</strong>
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Phone</strong>
+                            </div>
+                            <div class="col-md-3 text-right">
+                                <strong>Email</strong>
+                            </div>
+                        </div>
+                    </li>
                     <li class="list-group-item" ng-repeat="person in vm.result | orderBy:'name'">
                         <a ng-href="{{ vm.baseUrl }}{{ person._id }}">
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="name">
                                         {{ person.name }}
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="office-container" ng-show="person.office">
                                         {{ person.office }}
                                     </div>                              
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="phone-container" ng-show="person.phoneNumber">
                                         {{ person.phoneNumber }}
                                     </div>
                                 </div>
-                                <div class="col-md-4 text-right">
+                                <div class="col-md-3 text-right">
                                     <div class="email" ng-show="person.email">
                                         {{ person.email }}
                                     </div>
